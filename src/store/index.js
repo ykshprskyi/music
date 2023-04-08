@@ -2,7 +2,7 @@ import { legacy_createStore as createStore } from "redux";
 import albums from "../data/dataAlbums";
 
 const initialState = {
-  gamesList: albums,
+  albumsList: albums,
   selectedGenre: "none",
   searchRequest: "",
   playlist: [],

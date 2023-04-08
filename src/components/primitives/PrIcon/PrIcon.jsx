@@ -1,5 +1,5 @@
-export const prsvg = ({ iconName }) => {
-  const iconsrc = require(`../../assets/images/${iconName}.svg`);
+export const PrIcon = ({ iconName }) => {
+  const iconsrc = require(`../../../assets/images/${iconName}.svg`);
   return (
     <img
       className={`icon ${iconName}`}
