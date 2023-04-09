@@ -18,7 +18,6 @@ body {
   line-height: 1.5;
   width: 100%;
   height: 100%;
-  background: #fff;
   position: relative;
 }
 html {
@@ -26,10 +25,16 @@ html {
   height: 100%;
   font-size: 16px;
   color: v.$black;
-  background: #006262;
+  background: linear-gradient(to bottom right, #0a3d62, #006442);
   @include m.pcS {
     font-size: 0.9375vw;
   }
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {

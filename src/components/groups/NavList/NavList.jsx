@@ -1,33 +1,35 @@
 import { Svgbuttonwh } from "../../primitives/Svgbuttonwh/Svgbuttonwh";
+import "./NavList.scss";
+
 export const NavList = () => {
   const navList = [
     { icon: "catalog-black", btnText: "Browse albums", innerLink: "catalog" },
     { icon: "404", btnText: "404 page", innerLink: "404" },
     {
       icon: "git",
-      btnText: "commit Log",
+      btnText: "Commit Log",
       outerLink: "https://github.com/ykshprskyi/Music/commits/main",
     },
     {
       icon: "react-logo",
-      btnText: "technologies",
+      btnText: "Technologies",
       innerLink: "technologies",
     },
     {
       icon: "githublogo-dark",
-      btnText: "source code",
+      btnText: "Source code",
       outerLink: "https://github.com/ykshprskyi/Music",
     },
     {
       icon: "telegram",
-      btnText: "contact me",
+      btnText: "Contact me",
       outerLink: "https://t.me/ykshprsky",
     },
   ];
   return (
     <div className="navlist">
       <h2 className="navlist_title">Navigation</h2>
-      <div className="buttons buttons_navigation">
+      <div className="buttons navlist_buttons buttons_navigation">
         {navList.map((el, index) =>
           el.outerLink ? (
             <Svgbuttonwh

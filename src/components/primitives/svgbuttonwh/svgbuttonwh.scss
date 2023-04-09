@@ -1,2 +1,39 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
+
+.buttons_item__white {
+  background: v.$white;
+  color: v.$black;
+  .buttons_item__icon {
+    width: 16px;
+    margin-right: 5px;
+    @include m.pcS {
+      width: m.rem(16);
+      margin-right: m.rem(5);
+    }
+  }
+  &.buttons_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 18px;
+    width: 100%;
+    padding: 10px;
+    @include m.pcS {
+      padding: m.rem(10) m.rem(30);
+    }
+    p {
+      font-size: 18px;
+      @include m.pcS {
+        font-size: m.rem(20);
+      }
+    }
+    .buttons_item__link {
+      @include m.block_full();
+    }
+    // &:not(:last-of-type) {
+    //   margin-right: 10px;
+    // }
+  }
+}

@@ -4,7 +4,24 @@
 .header {
   display: flex;
   justify-content: space-between;
+  padding: 15px 20px;
+  @include m.pcS {
+    padding: m.rem(25) m.rem(75);
+  }
   > &_left {
     display: flex;
+    > .buttons_item__text {
+      &:first-of-type {
+        text-transform: uppercase;
+      }
+    }
+  }
+  > &_right {
+    .buttons_item__text {
+      display: none;
+      @include m.pcS {
+        display: block;
+      }
+    }
   }
 }

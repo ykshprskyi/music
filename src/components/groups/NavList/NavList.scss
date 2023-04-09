@@ -1,2 +1,22 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
+
+.navlist {
+  &_title {
+    text-align: center;
+    margin-bottom: 15px;
+    @include m.pcS {
+      margin-bottom: m.rem(15);
+    }
+  }
+  &_buttons {
+    .buttons_item {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+        @include m.pcS {
+          margin-bottom: m.rem(10);
+        }
+      }
+    }
+  }
+}

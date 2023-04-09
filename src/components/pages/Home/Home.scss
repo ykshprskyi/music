@@ -1,2 +1,59 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  flex-grow: 1;
+  align-items: center;
+  @include m.pcS {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: m.rem(25) m.rem(75);
+  }
+  > &_left {
+    @include m.pcS {
+      max-width: m.rem(900);
+    }
+    &__title {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      line-height: 1;
+      @include m.pcS {
+        margin-bottom: m.rem(30);
+      }
+    }
+    &__desc {
+      span {
+        color: v.$yellow;
+      }
+    }
+    &_text {
+      color: v.$white;
+      margin-bottom: 30px;
+      background: rgba(255, 255, 255, 0.285);
+      border-radius: 30px;
+      padding: 50px 30px;
+      @include m.pcS {
+        border-radius: m.rem(30);
+        margin-bottom: m.rem(30);
+        padding: m.rem(50) m.rem(30);
+      }
+    }
+  }
+  > &_right {
+    color: v.$white;
+    padding: 25px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.285);
+    border-radius: 30px;
+    margin-top: 30px;
+    @include m.pcS {
+      margin-top: 0;
+      border-radius: m.rem(30);
+      padding: m.rem(25);
+      max-width: m.rem(350);
+    }
+  }
+}

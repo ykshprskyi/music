@@ -1,2 +1,24 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
+
+.buttons_row {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.285);
+  border-radius: 30px;
+  gap: 10px;
+  padding: 20px 15px;
+  @include m.pcS {
+    padding: m.rem(25) m.rem(30);
+    gap: unset;
+    border-radius: m.rem(30);
+    justify-content: space-between;
+  }
+  .buttons_item {
+    width: 48%;
+
+    @include m.pcS {
+      width: 24%;
+    }
+  }
+}

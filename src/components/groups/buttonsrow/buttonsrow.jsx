@@ -1,13 +1,15 @@
 import { Svgbuttonwh } from "../../primitives/Svgbuttonwh/Svgbuttonwh";
 import { useSelector } from "react-redux";
 import albums from "../../../data/dataAlbums";
+import "./Buttonsrow.scss";
+
 export const Buttonsrow = () => {
   const albumsList = albums;
   const randomAlbumId = Math.floor(Math.random() * albumsList.length);
   const btnsList = [
     {
       icon: "enter",
-      btnText: "start",
+      btnText: "Start",
       innerLink: "/browse",
     },
     {
@@ -17,18 +19,18 @@ export const Buttonsrow = () => {
     },
     {
       icon: "githublogo-dark",
-      btnText: "gitHub",
+      btnText: "GitHub",
       outerLink: "https://github.com/ykshprskyi",
     },
     {
       icon: "linkedin",
-      btnText: "linkedIn",
+      btnText: "LinkedIn",
       outerLink: "https://www.linkedin.com/in/yurii-kashperskyi-7337b8244/",
     },
   ];
   return (
     <div>
-      <ul className="buttons buttons_row">
+      <div className="buttons buttons_row">
         {btnsList.map((el, index) =>
           el.outerLink ? (
             <Svgbuttonwh
@@ -46,7 +48,7 @@ export const Buttonsrow = () => {
             />
           )
         )}
-      </ul>
+      </div>
     </div>
   );
 };
