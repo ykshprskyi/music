@@ -1,10 +1,11 @@
 import { Buttonsrow } from "../../groups/Buttonsrow/Buttonsrow";
+import { NavList } from "../../groups/NavList/NavList";
 export const HomePage = () => {
   return (
     <div className="home">
       <div className="home_left">
         <div className="home_left">
-          <h1 className="home_left__title">Tune Trove </h1>
+          <h1 className="home_left__title">Tune Trove</h1>
           <p className="home_left__desc">
             Our service will help you <span>discover</span> new and exciting
             music genres and artists to expand your playlist. We offer to
@@ -19,6 +20,9 @@ export const HomePage = () => {
             <Buttonsrow></Buttonsrow>
           </div>
         </div>
+      </div>
+      <div className="home_right">
+        <NavList />
       </div>
     </div>
   );

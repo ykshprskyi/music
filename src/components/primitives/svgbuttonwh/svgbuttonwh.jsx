@@ -3,9 +3,14 @@ import { PrIcon } from "../PrIcon/PrIcon";
 
 export const Svgbuttonwh = ({ icon, btnText, outerLink, innerLink }) => {
   return (
-    <button className="buttons__item">
+    <button className="buttons__item buttons_item__white">
       {outerLink ? (
-        <a className="buttons__item__link" target="_blank" href={outerLink}></a>
+        <a
+          className="buttons__item__link"
+          rel="noreferrer"
+          target="_blank"
+          href={outerLink}
+        ></a>
       ) : (
         <Link to={innerLink} />
       )}

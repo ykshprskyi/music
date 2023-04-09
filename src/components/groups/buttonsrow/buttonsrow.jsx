@@ -11,7 +11,7 @@ export const Buttonsrow = () => {
       innerLink: "/browse",
     },
     {
-      icon: "dice",
+      icon: "random",
       btnText: "Random Album",
       innerLink: `/albums/${randomAlbumId}`,
     },

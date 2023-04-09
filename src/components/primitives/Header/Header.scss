@@ -1,0 +1,9 @@
+@import url(../../../styles/variables.scss);
+@import url(../../../styles/mixins.scss);
+
+.header {
+  display: flex;
+  > &_left {
+    display: flex;
+  }
+}
