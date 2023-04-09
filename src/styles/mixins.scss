@@ -29,3 +29,56 @@
   -ms-transition: 0.3s;
   transition: 0.3s;
 }
+
+@mixin block_full() {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 0;
+}
+@mixin h1 {
+  font-size: 32px;
+  font-weight: 700;
+  @include pcS {
+    font-size: rem(84);
+  }
+}
+
+@mixin h2 {
+  font-size: 24px;
+  font-weight: 700;
+  @include pcS {
+    font-size: rem(64);
+  }
+}
+
+@mixin h3 {
+  font-size: 22px;
+  font-weight: 700;
+  @include pcS {
+    font-size: rem(48);
+  }
+}
+
+@mixin h4 {
+  font-size: 20px;
+  font-weight: 700;
+  @include pcS {
+    font-size: rem(34);
+  }
+}
+
+@mixin h5 {
+  font-size: 18px;
+  font-weight: 700;
+  @include pcS {
+    font-size: rem(24);
+  }
+}
+
+@mixin regular {
+  font-size: 1rem;
+  font-weight: 400;
+}

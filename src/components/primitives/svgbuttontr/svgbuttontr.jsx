@@ -1,5 +1,5 @@
 import { PrIcon } from "../PrIcon/PrIcon";
-
+import "./Svgbuttontr.scss";
 export const Svgbuttontr = ({ icon, btnText, navigateTo }) => {
   return (
     <button

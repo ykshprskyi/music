@@ -1,8 +1,9 @@
-@import url(../../../styles/variables.scss);
-@import url(../../../styles/mixins.scss);
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
 
 .header {
   display: flex;
+  justify-content: space-between;
   > &_left {
     display: flex;
   }
