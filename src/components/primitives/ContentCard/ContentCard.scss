@@ -1,0 +1,40 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+
+.album {
+  margin-bottom: 15px;
+  @include m.pcS {
+    margin: unset;
+    width: 25%;
+    padding: m.rem(10);
+  }
+  &_content {
+    position: relative;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.285);
+    border: 1px solid v.$white;
+    @include m.pcS {
+      padding: m.rem(20);
+      border: m.rem(1) solid v.$white;
+    }
+    &__cover {
+      margin-bottom: 10px;
+      @include m.pcS() {
+        margin-bottom: m.rem(10);
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &__name {
+      h3 {
+        line-height: 1;
+      }
+    }
+    &__author {
+    }
+    &__link {
+      @include m.block_full();
+    }
+  }
+}

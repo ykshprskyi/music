@@ -1,2 +1,26 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
+
+.genre_btn {
+  display: flex;
+  align-items: center;
+  min-width: fit-content;
+  margin-right: 15px;
+  @include m.pcS() {
+    margin-right: unset;
+    margin-bottom: m.rem(10);
+  }
+  &__icon {
+    width: 26px;
+    margin-right: 5px;
+    @include m.pcS() {
+      width: m.rem(26);
+      margin-right: m.rem(5);
+    }
+    img {
+      // vertical-align: baseline;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

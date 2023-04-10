@@ -7,6 +7,7 @@
   .buttons_item__icon {
     width: 35px;
     margin-right: 5px;
+    height: 100%;
     @include m.pcS {
       width: m.rem(35);
       margin-right: m.rem(5);
@@ -18,6 +19,9 @@
     font-size: 18px;
     &:not(:last-of-type) {
       margin-right: 10px;
+      @include m.pcS {
+        margin-right: m.rem(10);
+      }
     }
   }
 }

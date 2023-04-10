@@ -1,6 +1,8 @@
 import { HomePage } from "./components/pages/Home/Home";
 import { Layout } from "./components/pages/Layout/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Catalog } from "./components/pages/Catalog/Catalog";
+import { ContentPage } from "./components/pages/ContentPage/ContentPage";
 
 const router = createBrowserRouter([
   {
@@ -9,6 +11,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/catalog",
+        element: <Catalog />,
+      },
+      {
+        path: "albums/:albumId",
+        element: <ContentPage />,
       },
     ],
   },

@@ -5,10 +5,15 @@
   background: v.$white;
   color: v.$black;
   .buttons_item__icon {
-    width: 16px;
+    width: 18px;
     margin-right: 5px;
+    img {
+      height: 100%;
+      vertical-align: baseline;
+      width: 100%;
+    }
     @include m.pcS {
-      width: m.rem(16);
+      width: m.rem(20);
       margin-right: m.rem(5);
     }
   }
@@ -21,6 +26,7 @@
     width: 100%;
     padding: 10px;
     @include m.pcS {
+      border-radius: m.rem(18);
       padding: m.rem(10) m.rem(30);
     }
     p {
