@@ -4,7 +4,7 @@ import albums from "../../../data/dataAlbums";
 import "./Buttonsrow.scss";
 
 export const Buttonsrow = () => {
-  const albumsList = albums;
+  const albumsList = useSelector((state) => state.albumsList);
   const randomAlbumId = Math.floor(Math.random() * albumsList.length);
   const btnsList = [
     {
@@ -15,7 +15,7 @@ export const Buttonsrow = () => {
     {
       icon: "random",
       btnText: "Random Album",
-      innerLink: `/albums/${randomAlbumId}`,
+      innerLink: `/catalog/${randomAlbumId}`,
     },
     {
       icon: "githublogo-dark",

@@ -12,7 +12,7 @@ export const GenreList = () => {
   return (
     <div className="catalog_genres_list">
       {genres.map((el, index) => (
-        <Genrebutton genreName={el.name} key={index} icon={el.icon} />
+        <Genrebutton genreName={el.name} key={el.name} icon={el.icon} />
       ))}
     </div>
   );

@@ -2,19 +2,19 @@ import { PrImage } from "../PrImage/PrImage";
 import { Link } from "react-router-dom";
 import "./ContentCard.scss";
 
-export const ContentCard = ({ id, name, author, cover }) => {
+export const ContentCard = ({ album }) => {
   return (
-    <div className={`album album-${id}`}>
+    <div className={`album album-${album.id}`}>
       <div className="album_content">
-        <Link className="album_content__link" to={`/albums/${id}`} />
+        <Link className="album_content__link" to={`${album.id}`} />
         <div className="album_content__cover">
-          <PrImage name={cover} />
+          <PrImage name={album.cover} />
         </div>
         <div className="album_content__name">
-          <h3>{name}</h3>
+          <h3>{album.name}</h3>
         </div>
         <div className="album_content__author">
-          <h4>{author}</h4>
+          <h4>{album.author}</h4>
         </div>
         <div className="album_content__add">Add to playlist</div>
       </div>

@@ -13,7 +13,7 @@ export const Header = () => {
           navigateTo={() => navigateTo("/")}
         ></Svgbuttontr>
         <Svgbuttontr
-          icon={"catalog"}
+          icon={"catalog-white"}
           btnText={"All albums"}
           navigateTo={() => navigateTo("catalog")}
         ></Svgbuttontr>

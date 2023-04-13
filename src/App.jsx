@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         element: <Catalog />,
       },
       {
-        path: "albums/:albumId",
+        path: "catalog/:albumId",
         element: <ContentPage />,
       },
     ],

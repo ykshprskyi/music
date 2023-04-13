@@ -1,2 +1,11 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
+&_list {
+  max-width: 100%;
+  display: flex;
+  overflow: auto;
+  @include m.pcS() {
+    overflow: unset;
+    display: block;
+  }
+}

@@ -25,15 +25,6 @@
         margin-bottom: m.rem(15);
       }
     }
-    &_list {
-      max-width: 100%;
-      display: flex;
-      overflow: auto;
-      @include m.pcS() {
-        overflow: unset;
-        display: block;
-      }
-    }
   }
   &_content {
     display: flex;
