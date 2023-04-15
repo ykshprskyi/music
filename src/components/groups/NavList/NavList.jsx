@@ -8,7 +8,7 @@ export const NavList = () => {
     {
       icon: "git",
       btnText: "Commit Log",
-      outerLink: "https://github.com/ykshprskyi/Music/commits/main",
+      outerLink: "https://github.com/ykshprskyi/Music/commits",
     },
     {
       icon: "react-logo",

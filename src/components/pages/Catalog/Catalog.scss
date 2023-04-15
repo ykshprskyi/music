@@ -2,12 +2,9 @@
 @use "../../../styles/variables.scss" as v;
 
 .catalog {
-  padding: 15px 20px;
-  flex-grow: 1;
+  @include m.layout();
   @include m.pcS() {
     display: flex;
-
-    padding: m.rem(25) m.rem(75);
   }
   &_genres {
     color: v.$white;

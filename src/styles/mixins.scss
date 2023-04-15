@@ -82,3 +82,10 @@
   font-size: 1rem;
   font-weight: 400;
 }
+
+@mixin layout {
+  padding: 15px 20px;
+  @include pcS {
+    padding: rem(25) rem(75);
+  }
+}

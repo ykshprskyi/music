@@ -17,11 +17,5 @@
     display: flex;
     align-items: center;
     font-size: 18px;
-    &:not(:last-of-type) {
-      margin-right: 10px;
-      @include m.pcS {
-        margin-right: m.rem(10);
-      }
-    }
   }
 }

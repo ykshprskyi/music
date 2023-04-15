@@ -6,6 +6,7 @@
   align-items: center;
   min-width: fit-content;
   margin-right: 15px;
+  cursor: pointer;
   @include m.pcS() {
     margin-right: unset;
     margin-bottom: m.rem(10);

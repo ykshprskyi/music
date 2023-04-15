@@ -22,7 +22,7 @@ const reducer = (state, action) => {
           ...state,
           selectedGenre: action.payload.name,
           albumsList: albums.filter(
-            (album) => album.album === action.payload.name
+            (album) => album.genre === action.payload.name
           ),
         };
     case "ADD_TO_PLAYLIST":

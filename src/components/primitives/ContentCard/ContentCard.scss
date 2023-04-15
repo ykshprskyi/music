@@ -3,6 +3,8 @@
 
 .album {
   margin-bottom: 15px;
+  opacity: 0;
+  animation: cardAppeareance 0.6s ease-in forwards;
   @include m.pcS {
     margin: unset;
     width: 25%;
@@ -42,5 +44,17 @@
     &__link {
       @include m.block_full();
     }
+  }
+}
+
+@keyframes cardAppeareance {
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

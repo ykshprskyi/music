@@ -1,5 +1,6 @@
 import { Buttonsrow } from "../../groups/Buttonsrow/Buttonsrow";
 import { NavList } from "../../groups/NavList/NavList";
+import { Canvas } from "../../primitives/Canvas/Canvas";
 import "./Home.scss";
 
 export const HomePage = () => {

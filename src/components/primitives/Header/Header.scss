@@ -10,6 +10,14 @@
   }
   > &_left {
     display: flex;
+    &__item {
+      &:not(:last-of-type) {
+        margin-right: 10px;
+        @include m.pcS {
+          margin-right: m.rem(20);
+        }
+      }
+    }
     > .buttons_item__text {
       &:first-of-type {
         text-transform: uppercase;

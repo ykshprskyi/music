@@ -1,0 +1,18 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+
+.playlist {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: v.$white;
+  &_icon {
+    width: 35px;
+    margin-right: 5px;
+    height: 100%;
+    @include m.pcS() {
+      margin-right: m.rem(5);
+      width: m.rem(35);
+    }
+  }
+}

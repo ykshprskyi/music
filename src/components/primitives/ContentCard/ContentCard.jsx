@@ -1,8 +1,9 @@
 import { PrImage } from "../PrImage/PrImage";
 import { Link } from "react-router-dom";
+import { AddToPlaylist } from "../../primitives/AddToPlaylist/AddToPlaylist";
 import "./ContentCard.scss";
 
-export const ContentCard = ({ album }) => {
+export function ContentCard({ album }) {
   return (
     <div className={`album album-${album.id}`}>
       <div className="album_content">
@@ -16,8 +17,8 @@ export const ContentCard = ({ album }) => {
         <div className="album_content__author">
           <h4>{album.author}</h4>
         </div>
-        <div className="album_content__add">Add to playlist</div>
+        <AddToPlaylist albumId={album.id} />
       </div>
     </div>
   );
-};
+}
