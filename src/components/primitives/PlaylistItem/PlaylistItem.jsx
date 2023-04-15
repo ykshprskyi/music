@@ -11,20 +11,23 @@ export const PlaylistItem = ({
   albumCover,
 }) => {
   const dispatch = useDispatch();
-  const clickHandler = (e) => {
+  const deleteClickHandler = (e) => {
     e.stopPropagation();
     dispatch(actions.deleteFromPlaylist(albumId));
   };
 
   return (
-    <div>
-      <div className="album_content__cover">
-        <PrImage name={albumCover} />
-      </div>
-      <div>{albumName}</div>
-      <div>{albumAuthor}</div>
-      <div onClick={clickHandler}>
-        <PrIcon iconName={"cross"} />
+    <div className="playlist_item">
+      <div className="playlist_item__wrapper">
+        <div className="playlist_item__cover">
+          <PrImage name={albumCover} />
+        </div>
+        <div className="playlist_item__comp">
+          {albumName} - {albumAuthor}
+        </div>
+        <div className="playlist_item__btn" onClick={deleteClickHandler}>
+          <PrIcon iconName={"cross"} />
+        </div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ export const AddToPlaylist = ({ albumId }) => {
     setIsInPlaylist(playlist.some((el) => el.id === albumId));
   }, [playlist]);
 
-  const clickHandler = (e) => {
+  const addClickHandler = (e) => {
     e.stopPropagation();
     {
       isInPlaylist
@@ -21,20 +21,20 @@ export const AddToPlaylist = ({ albumId }) => {
     }
   };
   return (
-    <div className="Add_btn" onClick={clickHandler}>
+    <div className="add_btn" onClick={addClickHandler}>
       {isInPlaylist ? (
-        <div className="Add_btn_item">
-          <div className="Add_btn__icon">
+        <div className="add_btn_item">
+          <div className="add_btn__icon">
             <PrIcon iconName={"check"} />
           </div>
-          <span className="Add_btn__text">Added to Playlist</span>
+          <span className="add_btn__text">Added to Playlist</span>
         </div>
       ) : (
-        <div className="Add_btn_item">
-          <div className="Add_btn__icon">
+        <div className="add_btn_item">
+          <div className="add_btn__icon">
             <PrIcon iconName={"plus"} />
           </div>
-          <span className="Add_btn__text">Add to Playlist</span>
+          <span className="add_btn__text">Add to Playlist</span>
         </div>
       )}
     </div>

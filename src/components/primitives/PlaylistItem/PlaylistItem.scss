@@ -1,0 +1,32 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+
+.playlist_item {
+  margin-bottom: 10px;
+  &__wrapper {
+    &::before {
+      counter-increment: section;
+      content: counter(section);
+      margin-right: 10px;
+      width: 10px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  &__cover {
+    width: 50px;
+  }
+  &__comp {
+    margin: 0 15px;
+    flex-grow: 1;
+  }
+  &__btn {
+    justify-self: flex-end;
+    width: 25px;
+    cursor: pointer;
+  }
+}

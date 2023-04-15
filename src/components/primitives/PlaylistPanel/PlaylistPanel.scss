@@ -1,2 +1,59 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
+
+.header_right__panel {
+  opacity: 0;
+  transform: translateX(-30%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+  z-index: 2;
+
+  @include m.trans();
+  &.is-open {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+  .playlist_panel__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .playlist_panel__title {
+  }
+  .playlist_panel__total {
+    margin-top: 15px;
+  }
+  .playlist_panel__list {
+    height: 100%;
+    background: linear-gradient(to bottom right, #0a3d62, #006442);
+    position: relative;
+    z-index: 2;
+    color: v.$white;
+    padding: 25px;
+    counter-reset: section;
+    .empty-message {
+      &_link a {
+        color: v.$white;
+      }
+    }
+    &__items {
+      max-height: 80vh;
+      overflow: auto;
+    }
+  }
+  .playlist_panel__overlay {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.4);
+    height: 100vh;
+    width: 100vw;
+  }
+}

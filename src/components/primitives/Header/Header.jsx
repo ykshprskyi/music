@@ -4,11 +4,20 @@ import { useDispatch } from "react-redux";
 import { actions } from "../../../store/actions";
 import { PlaylistBtn } from "../PlaylistBtn/PlaylistBtn";
 import { PlaylistPanel } from "../PlaylistPanel/PlaylistPanel";
+import { useState } from "react";
 import "./Header.scss";
 export const Header = () => {
   const navigate = useNavigate();
   const navigateTo = (path) => navigate(path);
   const dispatch = useDispatch();
+  const [isOpen, setIsOpen] = useState(false);
+  const openClickHandler = (e) => {
+    e.stopPropagation();
+    setIsOpen(true);
+  };
+  const closeClickHandler = () => {
+    setIsOpen(false);
+  };
   return (
     <header className="header">
       <div className="header_left">
@@ -31,8 +40,18 @@ export const Header = () => {
         </div>
       </div>
       <div className="header_right">
-        <PlaylistBtn />
-        <PlaylistPanel />
+        <div className="header_right__btn" onClick={openClickHandler}>
+          <PlaylistBtn />
+        </div>
+        {isOpen ? (
+          <div className="header_right__panel is-open">
+            <PlaylistPanel isOpen={isOpen} setIsOpen={closeClickHandler} />
+          </div>
+        ) : (
+          <div className="header_right__panel ">
+            <PlaylistPanel isOpen={isOpen} setIsOpen={closeClickHandler} />
+          </div>
+        )}
       </div>
     </header>
   );

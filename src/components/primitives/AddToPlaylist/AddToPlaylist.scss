@@ -1,2 +1,18 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
+
+.add_btn {
+  z-index: 1;
+  cursor: pointer;
+  &_item {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    width: 25px;
+    margin-right: 5px;
+    @include m.pcS {
+      width: m.rem(25);
+    }
+  }
+}
