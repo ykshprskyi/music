@@ -10,7 +10,10 @@
   bottom: 0;
   visibility: hidden;
   z-index: 2;
-
+  width: 100vw;
+  @include m.pcS {
+    width: unset;
+  }
   @include m.trans();
   &.is-open {
     opacity: 1;
@@ -22,11 +25,23 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+    @include m.pcS {
+      margin-bottom: m.rem(20);
+    }
   }
   .playlist_panel__title {
   }
+  .playlist_panel__closebtn {
+    width: 25px;
+    @include m.pcS {
+      display: none;
+    }
+  }
   .playlist_panel__total {
     margin-top: 15px;
+    @include m.pcS {
+      margin-top: m.rem(25);
+    }
   }
   .playlist_panel__list {
     height: 100%;
@@ -36,14 +51,27 @@
     color: v.$white;
     padding: 25px;
     counter-reset: section;
-    .empty-message {
-      &_link a {
-        color: v.$white;
+    @include m.pcS {
+      padding: m.rem(30);
+    }
+    .empty {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &_message {
+        &__link a {
+          color: v.$white;
+        }
       }
     }
     &__items {
-      max-height: 80vh;
-      overflow: auto;
+      max-height: 75vh;
+      height: 75vh;
+      padding-right: 10px;
+      @include m.scroll;
+      @include m.pcS {
+        padding-right: m.rem(15);
+      }
     }
   }
   .playlist_panel__overlay {

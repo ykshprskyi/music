@@ -23,14 +23,14 @@ export const AddToPlaylist = ({ albumId }) => {
   return (
     <div className="add_btn" onClick={addClickHandler}>
       {isInPlaylist ? (
-        <div className="add_btn_item">
+        <div className="add_btn_item added">
           <div className="add_btn__icon">
             <PrIcon iconName={"check"} />
           </div>
           <span className="add_btn__text">Added to Playlist</span>
         </div>
       ) : (
-        <div className="add_btn_item">
+        <div className="add_btn_item not-added">
           <div className="add_btn__icon">
             <PrIcon iconName={"plus"} />
           </div>

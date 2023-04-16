@@ -9,6 +9,10 @@
       content: counter(section);
       margin-right: 10px;
       width: 10px;
+      @include m.pcS {
+        margin-right: m.rem(15);
+        width: m.rem(15);
+      }
     }
     display: flex;
     align-items: center;
@@ -16,17 +20,31 @@
     padding: 5px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px;
+    @include m.pcS {
+      padding: m.rem(15);
+      border-radius: m.rem(5);
+      border: m.rem(1) solid rgba(255, 255, 255, 0.1);
+    }
   }
   &__cover {
     width: 50px;
+    @include m.pcS {
+      width: m.rem(75);
+    }
   }
   &__comp {
     margin: 0 15px;
     flex-grow: 1;
+    @include m.pcS {
+      margin: 0 m.rem(15);
+    }
   }
   &__btn {
     justify-self: flex-end;
     width: 25px;
     cursor: pointer;
+    @include m.pcS {
+      width: m.rem(25);
+    }
   }
 }

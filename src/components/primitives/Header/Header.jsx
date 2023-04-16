@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { actions } from "../../../store/actions";
 import { PlaylistBtn } from "../PlaylistBtn/PlaylistBtn";
 import { PlaylistPanel } from "../PlaylistPanel/PlaylistPanel";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Header.scss";
 export const Header = () => {
   const navigate = useNavigate();
@@ -18,6 +18,14 @@ export const Header = () => {
   const closeClickHandler = () => {
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("lock");
+    } else {
+      document.body.classList.remove("lock");
+    }
+  }, [isOpen]);
   return (
     <header className="header">
       <div className="header_left">

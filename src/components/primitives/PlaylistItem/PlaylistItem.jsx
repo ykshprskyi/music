@@ -26,7 +26,7 @@ export const PlaylistItem = ({
           {albumName} - {albumAuthor}
         </div>
         <div className="playlist_item__btn" onClick={deleteClickHandler}>
-          <PrIcon iconName={"cross"} />
+          <PrIcon iconName={"roundcross"} />
         </div>
       </div>
     </div>

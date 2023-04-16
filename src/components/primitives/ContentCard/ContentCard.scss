@@ -18,6 +18,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     @include m.pcS {
       padding: m.rem(20);
       border: m.rem(1) solid v.$white;
@@ -25,7 +27,7 @@
     &__cover {
       margin-bottom: 10px;
       @include m.pcS() {
-        margin-bottom: m.rem(10);
+        margin-bottom: m.rem(15);
         img {
           width: 100%;
         }

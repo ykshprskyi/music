@@ -89,3 +89,26 @@
     padding: rem(25) rem(75);
   }
 }
+@mixin scroll($thumb: $white, $track: rgba(0, 0, 0, 0.1), $width: 5px) {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: $thumb $track;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background: $track;
+    padding: 0 2px;
+    border-radius: 2px;
+    width: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $thumb;
+    border-radius: 2px;
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+  }
+}

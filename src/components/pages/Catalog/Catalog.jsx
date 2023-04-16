@@ -1,11 +1,13 @@
 import { GenreList } from "../../groups/Genrelist/Genrelist";
 import { ContentCard } from "../../primitives/ContentCard/ContentCard";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 import "./Catalog.scss";
 
 export const Catalog = () => {
   const albumsList = useSelector((state) => state.albumsList);
   const searchRequest = useSelector((state) => state.searchRequest);
+
   return (
     <div className="catalog">
       <div className="catalog_genres">

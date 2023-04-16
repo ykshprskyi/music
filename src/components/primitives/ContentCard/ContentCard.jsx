@@ -15,7 +15,7 @@ export function ContentCard({ album }) {
           <h3>{album.name}</h3>
         </div>
         <div className="album_content__author">
-          <h4>{album.author}</h4>
+          <h5>{album.author}</h5>
         </div>
         <AddToPlaylist albumId={album.id} />
       </div>

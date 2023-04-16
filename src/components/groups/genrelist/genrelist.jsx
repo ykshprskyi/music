@@ -1,4 +1,5 @@
 import { Genrebutton } from "../../primitives/Genrebutton/Genrebutton";
+import "./Genrelist.scss";
 export const GenreList = () => {
   const genres = [
     { name: "Nu-metal", icon: "numetal" },

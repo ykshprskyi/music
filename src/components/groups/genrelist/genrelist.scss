@@ -1,11 +1,15 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
-&_list {
+.catalog_genres_list {
   max-width: 100%;
   display: flex;
-  overflow: auto;
+  padding-bottom: 10px;
+  @include m.scroll;
+  scroll-snap-type: x mandatory;
+
   @include m.pcS() {
     overflow: unset;
     display: block;
+    padding-bottom: unset;
   }
 }
