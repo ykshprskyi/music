@@ -7,9 +7,16 @@
   min-width: fit-content;
   margin-right: 15px;
   cursor: pointer;
+  @include m.trans;
   @include m.pcS() {
     margin-right: unset;
     margin-bottom: m.rem(10);
+  }
+  &:hover {
+    transform: translateY(-10%);
+    &__icon {
+      background: v.$white;
+    }
   }
   &__icon {
     width: 26px;

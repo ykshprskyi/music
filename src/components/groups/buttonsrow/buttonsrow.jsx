@@ -10,7 +10,7 @@ export const Buttonsrow = () => {
     {
       icon: "enter",
       btnText: "Start",
-      innerLink: "/browse",
+      innerLink: "/catalog",
     },
     {
       icon: "random",

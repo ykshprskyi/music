@@ -4,6 +4,18 @@
 .buttons_item__white {
   background: v.$white;
   color: v.$black;
+  border: 1px solid transparent;
+  @include m.trans;
+  &:hover {
+    border: 1px solid v.$black;
+    background: v.$yellow;
+    @include m.pcS {
+      border: m.rem(1) solid v.$black;
+    }
+  }
+  @include m.pcS {
+    border: m.rem(1) solid transparent;
+  }
   .buttons_item__icon {
     width: 18px;
     margin-right: 5px;

@@ -2,11 +2,36 @@
 @use "../../../styles/variables.scss" as v;
 
 .add_btn {
-  z-index: 1;
   cursor: pointer;
+  z-index: 1;
+
   &_item {
     display: flex;
     align-items: center;
+    background: v.$white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    @include m.pcS {
+      padding: m.rem(5);
+      border-radius: m.rem(5);
+      border: m.rem(1) solid transparent;
+    }
+    @include m.trans;
+    &.added {
+      background: transparent;
+      border: 1px solid v.$black;
+      @include m.pcS {
+        border: m.rem(1) solid v.$black;
+      }
+    }
+    &:hover {
+      background: transparent;
+      border: 1px solid v.$black;
+      @include m.pcS {
+        border: m.rem(1) solid v.$black;
+      }
+    }
   }
   &__icon {
     width: 25px;

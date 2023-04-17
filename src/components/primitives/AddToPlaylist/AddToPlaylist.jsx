@@ -30,7 +30,7 @@ export const AddToPlaylist = ({ albumId }) => {
           <span className="add_btn__text">Added to Playlist</span>
         </div>
       ) : (
-        <div className="add_btn_item not-added">
+        <div className="add_btn_item ">
           <div className="add_btn__icon">
             <PrIcon iconName={"plus"} />
           </div>

@@ -4,6 +4,10 @@
 .buttons_item__transparent {
   background: transparent;
   color: v.$white;
+  @include m.trans;
+  &:hover {
+    transform: scale(1.1);
+  }
   .buttons_item__icon {
     width: 35px;
     margin-right: 5px;
