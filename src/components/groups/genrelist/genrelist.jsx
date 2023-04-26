@@ -12,6 +12,7 @@ export const GenreList = () => {
   ];
   return (
     <div className="catalog_genres_list">
+      <h2>Genres</h2>
       {genres.map((el, index) => (
         <Genrebutton genreName={el.name} key={el.name} icon={el.icon} />
       ))}

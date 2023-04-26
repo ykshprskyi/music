@@ -4,6 +4,7 @@
 .buttons_item__transparent {
   background: transparent;
   color: v.$white;
+  // @include m.FadeInLeft;
   @include m.trans;
   &:hover {
     transform: scale(1.1);

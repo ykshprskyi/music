@@ -20,10 +20,20 @@
     padding: 5px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px;
+    position: relative;
+    @include m.trans;
     @include m.pcS {
       padding: m.rem(15);
       border-radius: m.rem(5);
       border: m.rem(1) solid rgba(255, 255, 255, 0.1);
+    }
+    &:hover {
+      border: m.rem(1) solid v.$yellow;
+    }
+  }
+  &__link {
+    a {
+      @include m.block_full;
     }
   }
   &__cover {
@@ -42,9 +52,14 @@
   &__btn {
     justify-self: flex-end;
     width: 25px;
+    z-index: 2;
     cursor: pointer;
+    @include m.trans;
     @include m.pcS {
       width: m.rem(25);
+    }
+    &:hover {
+      transform: scale(1.05);
     }
   }
 }

@@ -6,6 +6,7 @@ import "./Home.scss";
 export const HomePage = () => {
   return (
     <div className="home">
+      <Canvas width="1600" height="900" />
       <div className="home_left">
         <div className="home_left_text">
           <h1 className="home_left__title">Tune Trove</h1>

@@ -27,6 +27,7 @@ export const PlaylistPanel = ({ isOpen, setIsOpen }) => {
                   albumName={el.name}
                   albumAuthor={el.author}
                   albumCover={el.cover}
+                  setIsOpen={setIsOpen}
                 />
               ))}
             </div>

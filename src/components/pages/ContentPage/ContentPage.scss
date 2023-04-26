@@ -1,7 +1,156 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
 
-.content_page {
+.album-full {
   @include m.layout();
   color: v.$white;
+  &_wrapper {
+    @include m.pcS {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &_left {
+    @include m.fadeInUp;
+    @include m.pcS {
+      margin-right: m.rem(40);
+      @include m.FadeInLeft;
+    }
+    &__image {
+      margin: 0 -25px;
+      margin-bottom: 15px;
+
+      @include m.pcS {
+        margin: 0;
+        width: m.rem(600);
+        // height: 100%;
+      }
+      img {
+        width: 100%;
+        @include m.pcS {
+          // height: 100%;
+          // object-fit: contain;
+        }
+      }
+    }
+  }
+  &_right {
+    @include m.fadeInUp;
+
+    @include m.pcS {
+      @include m.FadeInRight;
+    }
+    &__name {
+      h1 {
+        line-height: 1.2;
+      }
+    }
+    &__author {
+      margin-bottom: 15px;
+      @include m.pcS {
+        margin-bottom: m.rem(15);
+      }
+    }
+    &__description {
+      margin-bottom: 15px;
+      @include m.pcS {
+        margin-bottom: m.rem(15);
+      }
+    }
+    &__tracklist {
+      margin-bottom: 15px;
+      @include m.pcS {
+        margin-bottom: m.rem(15);
+      }
+      .expand_btn {
+        cursor: pointer;
+        @include m.trans;
+        &__icon {
+          margin-left: 5px;
+          width: 20px;
+          @include m.pcS {
+            width: m.rem(20);
+            margin-left: m.rem(5);
+          }
+          @include m.trans;
+          &.opened {
+            transform: rotate(180deg);
+          }
+        }
+        &:hover {
+          color: v.$yellow;
+          .expand_btn__icon * {
+            @include m.trans;
+            stroke: v.$yellow;
+          }
+        }
+      }
+      &__list {
+        @include m.trans;
+        // position: absolute;
+        // visibility: hidden;
+        // transform: translateY(-15px);
+        display: none;
+        &.is-open {
+          // position: unset;
+          // visibility: visible;
+          // transform: translateY(0);
+          display: block;
+        }
+      }
+    }
+    &__date {
+      margin-bottom: 15px;
+      @include m.pcS {
+        margin-bottom: m.rem(15);
+      }
+    }
+    &__btns {
+      display: flex;
+      align-items: center;
+      margin: 0 -5px;
+      @include m.pcS {
+        margin: 0 m.rem(-5);
+      }
+      &__item {
+        width: 50%;
+        padding: 0 5px;
+        color: v.$black;
+        @include m.pcS {
+          width: auto;
+          padding: 0 m.rem(5);
+        }
+      }
+      &__link {
+        position: relative;
+        &__icon {
+          width: 20px;
+          margin-right: 5px;
+          @include m.trans;
+          @include m.pcS {
+            width: m.rem(20);
+            margin-right: m.rem(5);
+          }
+        }
+        a {
+          color: v.$white;
+          text-decoration: none;
+          @include m.trans;
+          &:before {
+            content: "";
+            @include m.block_full;
+          }
+        }
+        &:hover {
+          .album-full_right__btns__link__icon * {
+            @include m.trans;
+            stroke: v.$yellow;
+          }
+          a {
+            color: v.$yellow;
+          }
+        }
+      }
+    }
+  }
 }

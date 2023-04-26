@@ -1,6 +1,7 @@
 import { PrIcon } from "../PrIcon/PrIcon";
 import { PrImage } from "../PrImage/PrImage";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { actions } from "../../../store/actions";
 import "./PlaylistItem.scss";
 
@@ -9,6 +10,7 @@ export const PlaylistItem = ({
   albumName,
   albumAuthor,
   albumCover,
+  setIsOpen,
 }) => {
   const dispatch = useDispatch();
   const deleteClickHandler = (e) => {
@@ -19,6 +21,9 @@ export const PlaylistItem = ({
   return (
     <div className="playlist_item">
       <div className="playlist_item__wrapper">
+        <div className="playlist_item__link">
+          <Link to={`catalog/${albumId}`} onClick={setIsOpen} />
+        </div>
         <div className="playlist_item__cover">
           <PrImage name={albumCover} />
         </div>

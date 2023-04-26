@@ -35,6 +35,7 @@
       background: rgba(255, 255, 255, 0.285);
       border-radius: 30px;
       padding: 50px 30px;
+      @include m.fadeInUp;
       @include m.pcS {
         border-radius: m.rem(30);
         margin-bottom: m.rem(30);

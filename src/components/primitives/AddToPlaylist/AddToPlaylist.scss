@@ -13,7 +13,7 @@
     border-radius: 5px;
     border: 1px solid transparent;
     @include m.pcS {
-      padding: m.rem(5);
+      padding: m.rem(10);
       border-radius: m.rem(5);
       border: m.rem(1) solid transparent;
     }
