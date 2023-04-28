@@ -1,2 +1,28 @@
 @use "../../../styles/mixins.scss" as m;
 @use "../../../styles/variables.scss" as v;
+
+.technologies {
+  @include m.layout;
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    margin: -10px;
+    @include m.pcS {
+      margin: m.rem(-15);
+      padding: m.rem(45);
+      border-radius: m.rem(15);
+    }
+  }
+  &_title {
+    text-align: center;
+    color: v.$white;
+    margin-bottom: 30px;
+    @include m.fadeInUp;
+    @include m.pcS {
+      margin-bottom: m.rem(45);
+    }
+  }
+}

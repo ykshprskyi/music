@@ -1,0 +1,86 @@
+@use "../../../styles/mixins.scss" as m;
+@use "../../../styles/variables.scss" as v;
+
+.error-page {
+  @include m.layout;
+  height: 100%;
+  @include m.pcS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include m.fadeInUp;
+  &__banner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 25px;
+    border-radius: 15px;
+    padding-bottom: 35px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 15px;
+      background: v.$yellow;
+      animation: moveAnimation 10s linear forwards;
+    }
+    @include m.pcS {
+      height: auto;
+      flex-direction: row;
+      width: m.rem(800);
+      padding: m.rem(40);
+      border-radius: m.rem(15);
+      padding-bottom: m.rem(65);
+    }
+    &__image {
+      @include m.pcS {
+        margin-right: m.rem(30);
+      }
+    }
+    &__text {
+      color: v.$white;
+      text-align: center;
+      &__message {
+        font-size: 34px;
+        margin-bottom: 10px;
+        @include m.pcS {
+          font-size: m.rem(48);
+          margin-bottom: m.rem(15);
+        }
+      }
+      &__hint {
+        font-size: 28px;
+        color: lightgray;
+        @include m.pcS {
+          font-size: m.rem(34);
+        }
+      }
+      &__location {
+        color: v.$yellow;
+        font-size: 34px;
+        margin-right: 5px;
+        @include m.pcS {
+          font-size: m.rem(48);
+          margin-right: m.rem(5);
+        }
+      }
+    }
+  }
+}
+
+@keyframes moveAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

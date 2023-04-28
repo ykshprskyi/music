@@ -30,9 +30,10 @@ html {
   background: linear-gradient(to bottom right, #0a3d62, #006442);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100vh;
+
   @include m.pcS {
     font-size: 0.9375vw;
-    height: 100%;
   }
 }
 
