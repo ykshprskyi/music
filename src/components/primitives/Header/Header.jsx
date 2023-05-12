@@ -33,7 +33,7 @@ export const Header = () => {
           <Svgbuttontr
             icon={"logo"}
             btnText={"Tune Trove"}
-            navigateTo={() => navigateTo("/")}
+            navigateTo={() => navigateTo("/Music")}
           ></Svgbuttontr>
         </div>
         <div
