@@ -87,15 +87,18 @@
       }
       &__list {
         @include m.trans;
+        overflow: hidden;
         // position: absolute;
         // visibility: hidden;
         // transform: translateY(-15px);
-        display: none;
+        // display: none;
+        height: 0;
         &.is-open {
           // position: unset;
           // visibility: visible;
           // transform: translateY(0);
-          display: block;
+          // display: block;
+          height: 225px;
         }
       }
     }

@@ -1,13 +1,10 @@
 import { Svgbuttonwh } from "../../primitives/Svgbuttonwh/Svgbuttonwh";
-import { useNavigate } from "react-router-dom";
 import "./NavList.scss";
 
 export const NavList = () => {
-  const navigate = useNavigate();
-  const navigateTo = (path) => navigate(path);
   const navList = [
-    { icon: "catalog-black", btnText: "Browse albums", innerLink: "catalog" },
-    { icon: "404", btnText: "404 page", innerLink: "404" },
+    { icon: "catalog-black", btnText: "Browse albums", innerLink: "/catalog" },
+    { icon: "404", btnText: "404 page", innerLink: "/404" },
     {
       icon: "git",
       btnText: "Commit Log",
@@ -16,7 +13,7 @@ export const NavList = () => {
     {
       icon: "react-logo",
       btnText: "Technologies",
-      innerLink: "technologies",
+      innerLink: "/technologies",
     },
     {
       icon: "githublogo-dark",
@@ -39,14 +36,14 @@ export const NavList = () => {
               key={index}
               icon={el.icon}
               btnText={el.btnText}
-              navigateTo={() => navigateTo(`/${el.innerLink}`)}
+              outerLink={el.outerLink}
             />
           ) : (
             <Svgbuttonwh
               key={index}
               icon={el.icon}
               btnText={el.btnText}
-              navigateTo={() => navigateTo(`/${el.innerLink}`)}
+              innerLink={el.innerLink}
             />
           )
         )}

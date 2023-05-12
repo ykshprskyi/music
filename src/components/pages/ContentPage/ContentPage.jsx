@@ -41,29 +41,20 @@ export const ContentPage = () => {
           <div className="album-full_right__tracklist">
             <span className="expand_btn" onClick={ExpandClickHandler}>
               Expand tracklist
-              {Expanded ? (
-                <ArrowDown className="expand_btn__icon opened" />
-              ) : (
-                <ArrowDown className="expand_btn__icon " />
-              )}{" "}
+              <ArrowDown className="expand_btn__icon {opened}" />
             </span>
-            {Expanded ? (
-              <ul className="album-full_right__tracklist__list is-open">
-                {selectedAlbum.tracklist.map((item, index) => (
-                  <li key={index}>
-                    {index + 1}. {item}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <ul className="album-full_right__tracklist__list ">
-                {selectedAlbum.tracklist.map((item, index) => (
-                  <li key={index}>
-                    {index + 1}. {item}
-                  </li>
-                ))}
-              </ul>
-            )}
+
+            <ul
+              className={`album-full_right__tracklist__list ${
+                Expanded ? "is-open" : ``
+              }`}
+            >
+              {selectedAlbum.tracklist.map((item, index) => (
+                <li key={index}>
+                  {index + 1}. {item}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="album-full_right__date">
