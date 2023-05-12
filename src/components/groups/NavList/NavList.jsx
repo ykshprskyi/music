@@ -1,7 +1,10 @@
 import { Svgbuttonwh } from "../../primitives/Svgbuttonwh/Svgbuttonwh";
+import { useNavigate } from "react-router-dom";
 import "./NavList.scss";
 
 export const NavList = () => {
+  const navigate = useNavigate();
+  const navigateTo = (path) => navigate(path);
   const navList = [
     { icon: "catalog-black", btnText: "Browse albums", innerLink: "catalog" },
     { icon: "404", btnText: "404 page", innerLink: "404" },
@@ -36,14 +39,14 @@ export const NavList = () => {
               key={index}
               icon={el.icon}
               btnText={el.btnText}
-              outerLink={el.outerLink}
+              navigateTo={() => navigateTo(`/${el.innerLink}`)}
             />
           ) : (
             <Svgbuttonwh
               key={index}
               icon={el.icon}
               btnText={el.btnText}
-              innerLink={el.innerLink}
+              navigateTo={() => navigateTo(`/${el.innerLink}`)}
             />
           )
         )}
