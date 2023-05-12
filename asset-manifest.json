@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Music/static/css/main.2cd93d89.css",
-    "main.js": "/Music/static/js/main.acf0bc49.js",
+    "main.js": "/Music/static/js/main.2a635030.js",
     "static/media/currents.jpg": "/Music/static/media/currents.fd6ab887307cd30f2688.jpg",
     "static/media/roots.jpg": "/Music/static/media/roots.2dc2fd82b6efb072940b.jpg",
     "static/media/theendsofar.jpg": "/Music/static/media/theendsofar.a4fd57d13c1581ead065.jpg",
@@ -63,10 +63,10 @@
     "static/media/catalog.svg": "/Music/static/media/catalog.a68577852adb728c71d3.svg",
     "static/media/playlist.svg": "/Music/static/media/playlist.b2fab023260d8191a3fc.svg",
     "main.2cd93d89.css.map": "/Music/static/css/main.2cd93d89.css.map",
-    "main.acf0bc49.js.map": "/Music/static/js/main.acf0bc49.js.map"
+    "main.2a635030.js.map": "/Music/static/js/main.2a635030.js.map"
   },
   "entrypoints": [
     "static/css/main.2cd93d89.css",
-    "static/js/main.acf0bc49.js"
+    "static/js/main.2a635030.js"
   ]
 }
