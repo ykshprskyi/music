@@ -41,7 +41,9 @@ export const ContentPage = () => {
           <div className="album-full_right__tracklist">
             <span className="expand_btn" onClick={ExpandClickHandler}>
               Expand tracklist
-              <ArrowDown className="expand_btn__icon {opened}" />
+              <ArrowDown
+                className={`expand_btn__icon ${Expanded ? "opened" : ``}`}
+              />
             </span>
 
             <ul
