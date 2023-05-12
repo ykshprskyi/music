@@ -10,7 +10,7 @@ export const Svgbuttonwh = ({ icon, btnText, outerLink, innerLink }) => {
           className="buttons_item__link"
           rel="noreferrer"
           target="_blank"
-          href={outerLink}
+          // href={outerLink}
         ></a>
       ) : (
         <Link className="buttons_item__link" to={innerLink} />
